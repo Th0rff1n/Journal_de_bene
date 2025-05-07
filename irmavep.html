@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Mon carnet de création (numérique)</title>
+    <link rel="stylesheet" type="text/css" href="irmavep.css">
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet"> <!--AOS-->
+</head>
+
+<body>
+    <div class="off-screen-menu">
+        <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="vitelloni.html">I Vitelloni</a></li>
+            <li><a href="highschool.html">High School</a></li>
+            <li><a href="irmavep.html">Irma Vep</a></li>
+            <li><a href="tournage.html">Tournage</a></li>
+        </ul>
+    </div>
+
+    <nav>
+        <!-- Logo du site -->
+        <div class="nav-logo">
+         <img src="butterfly_lis3.png" class="logo">
+        <a href="index.html">Béné's journal</a>
+        </div>
+
+        <!-- Menu hamburger -->
+        <div class="hammenu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+<div class="theme-switch">
+  <label class="switch">
+    <input type="checkbox" id="theme-toggle">
+    <span class="slider"></span>
+  </label>
+</div>
+
+<p>
+    <h1> I- Irma Vep (2022)</h1>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/5OH8NkQMrQE?si=k-f82feb0GrKXk9r" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <br></br>
+    <b>Synopsis</b>
+<div class="text-content" data-aos="fade-up">
+    <p>Mira est une star de cinéma désabusée à la fois par sa carrière et sa rupture récente. Elle arrive en France pour incarner Irma Vep dans un remake du classique français du film muet, « Les Vampires ». Au fur et à mesure du tournage, Mira réalise que les frontières entre elle-même et le personnage qu’elle joue commencent à s’estomper et à fusionner. Irma Vep explore les limites ténues entre la fiction et la réalité, l’artifice et l’authenticité, mais aussi l’art et la vie.</p>
+
+    <br><p><i>Irma Vep</i> est le dernier film/série du programme de l'année de Terminale en spécialité Cinéma Audiovisuel. On vient tout juste de le commencer en classe mais, nous avons eu l'occasion de découvrir les 3 premiers épisodes de la série sur grand écran (une grande première) à la Cinémathèque de Paris à Bercy le 20 mars dernier.
+    Cette série est particulièrement intéressante pour ma classe de cinéma puisque nos films de fin d'année ont pour thème : le remake (de <i>Vertigo</i> d'Alfred Hitchcock et <i>Cindy the Doll is mine</i> de Bertrand Bonello). <i>Irma Vep (2022)</i> est un remake d'Olivier Assayas, le réalisateur du <a class="link" href="https://www.dailymotion.com/video/x8ptel0">film éponyme de 1996 (avec Maggie Cheung)</a> qui est lui-même un remake du film <i><a class="link" href="https://youtu.be/Qf-s-jPsm4E">Les Vampires (1915)</a></i> de Louis Feuillade . Funfact : Irma Vep est l'anagramme de Vampire et Mira est celui d'Irma (référence directe à la fameuse vamp des autres productions).
+    </p></div>
+    <br>
+<div class="image-text-pair" data-aos="fade-down">
+    <div class="image-row"> 
+        <img src="20250320_125159.jpg" class="img-stack2">
+        <img src="20250320_143114.jpg" class="img-stack2">
+    </div>
+    <div class="text-content">    
+    <p>Sur la première photo, on peut observer Alicia Vikander en Irma Vep à la fin de l'épisode 3 sur le grand écran d'une des salles de la cinémathèque. Sur la photo de droite, on peut y voir un critique de cinéma qui nous a fait une lecture sur la série (2022), le sérial (1915) et Assayas (1996 et 2022).</p>
+    </div>
+</div>
+
+    <script type="text/javascript">
+        const hamMenu = document.querySelector('.hammenu');
+        const offScreenMenu = document.querySelector('.off-screen-menu');
+
+        hamMenu.addEventListener('click', function() {
+            hamMenu.classList.toggle('active');
+            offScreenMenu.classList.toggle('active');
+        });
+    </script>
+
+<script>
+  const toggle = document.getElementById('theme-toggle');
+
+  toggle.addEventListener('change', function () {
+    document.body.classList.toggle('dark-mode');
+  });
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 2000,
+    once: false,  // Animation se répète en haut/bas
+  });
+</script>
+
+</body>
+</html>

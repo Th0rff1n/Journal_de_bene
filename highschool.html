@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Mon carnet de création (numérique)</title>
+    <link rel="stylesheet" type="text/css" href="highschool.css">
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet"> <!--AOS-->
+</head>
+
+<body>
+    <div class="off-screen-menu">
+        <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="vitelloni.html">I Vitelloni</a></li>
+            <li><a href="highschool.html">High School</a></li>
+            <li><a href="irmavep.html">Irma Vep</a></li>
+            <li><a href="tournage.html">Tournage</a></li>
+        </ul>
+    </div>
+
+    <nav>
+        <!-- Logo du site -->
+        <div class="nav-logo">
+         <img src="butterfly_lis3.png" class="logo">
+        <a href="index.html">Béné's journal</a>
+        </div>
+
+        <!-- Menu hamburger -->
+        <div class="hammenu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+<div class="theme-switch">
+  <label class="switch">
+    <input type="checkbox" id="theme-toggle">
+    <span class="slider"></span>
+  </label>
+</div>
+    <br></br>
+    <br></br>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/vzsHqQKi9G0?si=G4t2XH53wXOSShzj" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <br></br>
+    <b>Synopsis</b>
+<div class="text-content" data-aos="fade-down">
+    <p>Philadelphie, 1968. Dans un lycée public de bonne réputation, dont les élèves sont majoritairement blancs et issus de la classe moyenne, se déroule ce qui ressemble à une journée ordinaire. Les cours de langue ou d'histoire s'enchaînent rapidement, ainsi que les entretiens entre élèves, enseignants, parents et membres de l'administration à propos du comportement et des résultats des lycéens. Ces derniers sont chaque fois sommés d'écouter, de répéter et d'obéir. Puis, ce sont les activités culturelles et sportives qui se succèdent (gymnastique, baseball, cuisine, couture…), pour lesquelles garçons et filles sont généralement séparés. Le rythme est soutenu et ne laisse pas de temps aux jeunes pour se retrouver de façon informelle. Au sein de cet ordre hiérarchique, des dissensions se font toutefois sentir, sous la forme de conflits entre élèves, de critiques directes de l'institution ou d'inquiétudes sur l'avenir. C'est aussi l'évocation ponctuelle d'une actualité politique brûlante – la guerre du Viêt Nam et l'assassinat de Martin Luther King – qui vient troubler le huis clos de la Northeast High School.</p>
+</div>
+    <br></br>
+<div class="text-content" data-aos="fade-down">
+    <p>Avant de visionner <i>High School</i> pour la première fois en classe, on avait déjà découvert un autre film de Wiseman : <a class="link" href="https://youtu.be/GMjTVFzoJ8o"><i>Boxing Gym</i></a>. C’était pendant le Festival de l'ACID 2024, au cinéma Reflet Médicis à Paris. Ce jour-là, on ne savait pas trop à quoi s’attendre, mais ça nous a mis direct dans l’univers de Wiseman. Pas de voix off, pas d’interviews, juste des scènes du quotidien filmées avec beaucoup d’attention. <i>Boxing Gym</i> nous a permis de comprendre son style : il observe, il capte des petits moments, et c’est à nous autres, spectateurs, de faire les liens. Du coup, quand on a vu <i>High School</i> plus tard, on était un peu plus préparés à ce genre de mise en scène sans narration classique.
+    <br></br>
+    Dans <i>High School</i>, Frederick Wiseman filme le quotidien d’un lycée américain des années 60. Il ne fait pas d’interviews, ne met pas de musique, et ne commente jamais ce qu’on voit : il se contente d’observer, un peu comme une mouche sur le mur. Ça rend le film super réaliste, presque brut. On voit les élèves et les profs dans plein de situations du quotidien, et petit à petit, on comprend qu’il critique un système un peu trop strict, où les jeunes n’ont pas vraiment la parole et où on les formate pour servir la nation. Ce qui est intéressant, c’est que rien n’est dit clairement, mais à travers les images et le montage, on sent que Wiseman n’est pas neutre : il nous fait réfléchir sur l’autorité, l’éducation, et la place des élèves. Son montage d'ailleurs est une forme de réécriture, il choisit ce qu’il veut nous montrer et dans quel ordre. Il construit une sorte de discours en reliant les scènes entre elles. Par exemple, il peut enchaîner une discussion entre un prof et un élève avec une scène où un autre se fait engueuler, et là, on capte qu’il veut critiquer l’autorité ou le manque d’écoute. Donc même s’il fait du documentaire, il raconte quand même quelque chose de très précis avec ses choix de montage (petite part de fiction). C’est un peu comme s’il écrivait son point de vue, mais avec les images filmées.
+    </p>
+</div>
+
+    <script type="text/javascript">
+        const hamMenu = document.querySelector('.hammenu');
+        const offScreenMenu = document.querySelector('.off-screen-menu');
+
+        hamMenu.addEventListener('click', function() {
+            hamMenu.classList.toggle('active');
+            offScreenMenu.classList.toggle('active');
+        });
+    </script>
+
+<script>
+  const toggle = document.getElementById('theme-toggle');
+
+  toggle.addEventListener('change', function () {
+    document.body.classList.toggle('dark-mode');
+  });
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 2000,
+    once: false,  // Animation se répète en haut/bas
+  });
+</script>
+
+</body>
+</html>

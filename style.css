@@ -1,0 +1,515 @@
+.text-content {
+  flex: 1;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: black;
+}
+
+
+/* Off-screen menu */
+.off-screen-menu {
+    background-color: rgb(34, 37, 49);
+    height: 100vh;
+    width: 250px;
+    position: fixed;
+    top: 0;
+    right: -250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 1.5rem;
+    transition: .3s ease;
+    z-index: 1000;
+}
+
+.off-screen-menu.active {
+    right: 0;
+    width: 30vw; 
+    height: 100vh; /* Prend toute la hauteur */
+    background-color: rgba(34, 37, 49, 0.95); /* Fond semi-transparent */
+}
+
+body.menu-open {
+    position: relative;
+    z-index: 0;
+}
+
+.off-screen-menu ul {
+    list-style: none;
+    padding: 0;
+}
+
+.off-screen-menu li {
+    margin: 10px 0;
+}
+
+.off-screen-menu a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.5rem;
+    padding: 10px 20px;
+    display: block;
+    transition: background 0.3s, color 0.3s;
+}
+
+.off-screen-menu a:hover {
+    background-color: #00ADEF;
+    color: #fff;
+    border-radius: 5px;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(34, 37, 49);
+    padding: 0 20px;
+    z-index: 1000;
+}
+
+.nav-logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 50px;
+    margin-right: 10px;
+}
+
+.nav-logo a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+/* Menu hamburger */
+.hammenu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 25px;
+    cursor: pointer;
+    position: fixed;
+    top: 15px;
+    right: 20px;
+    z-index: 1100; /* Assure qu'il est au-dessus du menu */
+}
+
+.hammenu span {
+    display: block;
+    width: 100%;
+    height: 4px;
+    background-color: #00ADEF;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* Animation du menu hamburger en mode actif */
+.hammenu.active span:nth-child(1) {
+    transform: translateY(10px) rotate(45deg);
+}
+
+.hammenu.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hammenu.active span:nth-child(3) {
+    transform: translateY(-10px) rotate(-45deg);
+}
+
+
+/* Flash blanc */
+#flash {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: white;
+  z-index: 9999;
+  animation: flashAnimation 1s ease-out forwards;
+}
+
+@keyframes flashAnimation {
+  0% { opacity: 1; }
+  100% { opacity: 0; visibility: hidden; }
+}
+
+/* Conteneur intro texte + image */
+.intro-content {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 50px 20px;
+  gap: 10px;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 2s ease, transform 2s ease;
+}
+
+/* Texte à gauche */
+.intro-content .text {
+  max-width: 1000px;
+}
+
+.intro-content .image {
+  margin-top: 60px;
+  display: flex;
+  align-items: flex-end; 
+}
+
+
+.intro-content h1, .intro-content h5 {
+  margin: 0;
+}
+
+/* Image à droite */
+#mainImage {
+  width: 180px;
+}
+
+/* Image qui tourne */
+#rotatingImage {
+  width: 200px;
+  transition: transform 0.2s ease-out;
+}
+
+/* Section scroll + alignement */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+
+.text-content {
+  flex: 1;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: black;
+}
+
+a.link {
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+/* Mode par défaut : jour */
+body {
+  background-color: white;
+  color: black;
+  transition: background-color 0.5s, color 0.5s;
+}
+
+/* Mode nuit */
+body.dark-mode {
+  background-color: #121212;
+  color: white;
+}
+
+body.dark-mode,
+body.dark-mode p,
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode h4,
+body.dark-mode h5,
+body.dark-mode h6,
+body.dark-mode a,
+body.dark-mode .text-content,
+body.dark-mode .polaroid-title {
+  color: white !important;
+}
+
+body.dark-mode .polaroid-title {
+  background: rgba(0, 0, 0, 0.7); /* meilleure lisibilité */
+}
+
+body.dark-mode .theme-switch {
+  background: rgba(50, 50, 50, 0.8);
+}
+
+body.dark-mode .off-screen-menu {
+  background-color: rgba(18, 18, 18, 0.95);
+}
+
+body.dark-mode nav {
+  background-color: #1c1c1c;
+}
+
+
+/* Le switch (déjà dans ton code, mais à garder ici aussi) */
+.theme-switch {
+  position: fixed;
+  top: 70px;
+  right: 20px;
+  z-index: 1000;
+  background: rgba(255, 255, 255, 0.8);
+  padding: 5px;
+  border-radius: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 20px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 34px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 16px;
+  width: 16px;
+  left: 2px;
+  bottom: 2px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+.switch input:checked + .slider {
+  background-color: #00ADEF;
+}
+
+.switch input:checked + .slider:before {
+  transform: translateX(20px);
+}
+
+
+
+/* Container global */
+.background-animation {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1;
+  pointer-events: none;
+}
+
+/* Bulles */
+.bubble {
+  position: absolute;
+  bottom: -100px;
+  border-radius: 50%;
+  opacity: 0.9;
+  animation: float-bubble linear infinite;
+}
+
+/* Chaque bulle aura une animation personnalisée */
+@keyframes float-bubble {
+  0% {
+    transform: translate(0, 0) scale(1);
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.8;
+  }
+  100% {
+    transform: translate(var(--x), var(--y)) scale(1.2);
+    opacity: 0;
+  }
+}
+
+
+/* Papillons */
+.butterfly {
+  position: absolute;
+  width: 40px;
+  animation: fly 12s linear infinite;
+  opacity: 0.9;
+}
+
+/* Ajoute des positions différentes sur la hauteur de la page */
+.butterfly.b1 { top: 100px; left: -50px; animation-delay: 0s; }
+.butterfly.b2 { top: 600px; left: -80px; animation-delay: 3s; }
+.butterfly.b3 { top: 1200px; left: -60px; animation-delay: 6s; }
+.butterfly.b4 { top: 1800px; left: -90px; animation-delay: 9s; }
+
+@keyframes fly {
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  50% {
+    transform: translate(100vw, -40vh) rotate(180deg);
+  }
+  100% {
+    transform: translate(200vw, 0vh) rotate(360deg);
+  }
+}
+
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#rotatingImage {
+    width: 300px; /* Taille de l'image, ajuster selon tes besoins */
+    transition: transform 0.2s ease-out; /* Pour une rotation douce */
+}
+
+
+/* Polaroids */
+.polaroid-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.polaroid-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    margin: 30px auto;
+    max-width: 500px;
+}
+
+.polaroid {
+    width: 200px;
+    height: 300px;
+    background: #fff;
+    border: 10px solid #e0e0e0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.polaroid-title {
+    position: absolute;
+    bottom: -20px;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.9);
+    text-align: center;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #333;
+    padding: 1px;
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    transform: translateY(100%);
+    opacity: 0;
+}
+
+/* Conteneur de l'image */
+.polaroid-image-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+    width: 100%;
+    height: 70%;
+}
+
+.polaroid-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.2;
+    transition: opacity 0.5s ease-in-out;
+}
+
+/* Animation d’apparition des images */
+.polaroid:hover .polaroid-image {
+    opacity: 1;
+}
+
+/* Animation du texte */
+.polaroid:hover .polaroid-title {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+hr.rounded2{
+    border-top: 3px solid #00ADEF; 
+    border-radius: 5px;
+    size: 10px;
+}
+
+h4 {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.carousel-wrapper {
+  display: flex;
+  justify-content: center;
+  overflow-x: auto;
+  padding: 1rem 0;
+}
+
+.carousel {
+  display: flex;
+  gap: 1rem;
+  scroll-snap-type: x mandatory;
+  padding: 0 2rem;
+}
+
+
+.carousel a {
+  flex: 0 0 auto;
+  scroll-snap-align: center;
+  transition: transform 0.3s ease;
+}
+
+.carousel img {
+  width: 200px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* Effet focus au survol */
+.carousel a:hover img {
+  transform: scale(1.1);
+  opacity: 1;
+}
+
+/* Scrollbar discrète */
+.carousel-wrapper::-webkit-scrollbar {
+  height: 8px;
+}
+.carousel-wrapper::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 4px;
+}
